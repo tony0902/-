@@ -1,0 +1,20 @@
+#include <iostream>
+
+int iAns(int i, int iLv)
+{
+	if(i==iLv)
+	{ return iLv; }
+	else
+	{ return (i++ * iAns(i,iLv)); }
+}
+
+using namespace std;
+int main()
+{
+	int iStr,iLv;
+	cout << "請輸入起始值：";
+	cin >> iStr;
+	cout << "請輸入結束層級：";
+	cin >> iLv;
+	cout << iLv << "!=" << iAns(iStr,iLv) << endl;
+}

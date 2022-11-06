@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	struct strData {
+		char cID[5], cNAME[30];
+		int iAGE; float fHEIGHT;
+	};
+
+	struct strData sA;
+	cout << "輸入ID：";
+	cin >> sA.cID;
+	cout << "輸入NAME：";
+	cin >> sA.cNAME;
+	cout << "輸入年齡：";
+	cin >> sA.iAGE;
+	cout << "輸入身高：";
+	cin >> sA.fHEIGHT;
+	cout << "==============================\n";
+	cout << "ID:" << sA.cID << endl;
+	cout << "NAME:" << sA.cNAME << endl;
+	cout << "AGE:" << sA.iAGE << endl;
+	cout << "HEIGHT:" << sA.fHEIGHT << endl;
+}

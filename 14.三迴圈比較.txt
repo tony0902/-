@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i=0;
+	for (i = 10; i <= 3; i++)
+	{
+		cout << "For I=" << i << endl;
+	} cout << endl;
+
+	i = 10;
+	while (i <= 3)
+	{
+		cout << "While I=" << i << endl;
+		i++;
+	} cout << endl;
+
+	i = 10;
+	do
+	{
+		cout << "DoWhile I=" << i << endl;
+		i++;
+	} while (i <= 3); cout << endl;
+
+}

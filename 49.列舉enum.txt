@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	enum eData {
+		a=30,b,
+		c=90,d,e,f,g,
+		h=200,i,j
+	};
+
+	eData QQ=j;
+	cout << "QQ：" << QQ << endl;
+}

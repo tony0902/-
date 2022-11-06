@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iScore[6] = { 0 },*iPt=iScore;
+	for (int i = 0; i < 6 - 1; i++)
+	{
+		cout << (i == 0 ? "國文" : (i == 1 ? "英文" : (i == 2 ? "數學" : (i == 3 ? "社會" : "地理"))));
+		cout << "成績：";
+		cin >> *(iPt+i);
+		*(iPt+5) += *(iPt+i);
+	}
+
+	cout << "====================================================================\n";
+	cout << "國文\t英文\t數學\t社會\t地理\t總分\n";
+	for (int i = 0; i < 6; i++)
+	{
+		cout << *(iPt+i) << "\t";
+	}
+
+	cout << endl;
+}

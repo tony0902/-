@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int iN3 = 10, iN4 = 20;
+
+void vTP1(int iV1, int iV2) //V1,V2為區域變數 (傳值)
+{ iV1 = 500; iV2 = 1000; }
+
+void vTP2(int iN3,int iN4)	//與全域N3/N4同名的區域變數
+{ iN3 = 555; iN4 = 666; }
+
+void vTP3()
+{ iN3 = 555; iN4 = 666; } //存取全域N3/N4變數
+
+void vTP4(int* iP1,int* iP2) //存取P1/P2指向記憶體位址的值 (傳址)
+{ *iP1 = 55555; *iP2 = 66666; }
+
+void vTP5(int& iV1, int& iV2) //給來源別名 (傳參考)
+{ iV1 = 8591; iV2 = 5920; }
+
+int main()
+{
+	int iN1 = 100, iN2 = 200;
+	cout << "Num1=" << iN1 << ",Num2=" << iN2 << endl;
+	vTP1(iN1, iN2);
+	cout << "Num1=" << iN1 << ",Num2=" << iN2 << endl;
+	cout << "==========================================\n";
+	cout << "Num3=" << iN3 << ",Num4=" << iN4 << endl;
+	vTP2(iN1, iN2);
+	cout << "Num3=" << iN3 << ",Num4=" << iN4 << endl;
+	vTP3();
+	cout << "Num3=" << iN3 << ",Num4=" << iN4 << endl;
+	cout << "==========================================\n";
+	cout << "Num1=" << iN1 << ",Num2=" << iN2 << endl;
+	vTP4(&iN1, &iN2);
+	cout << "Num1=" << iN1 << ",Num2=" << iN2 << endl;
+	cout << "==========================================\n";
+	vTP5(iN1, iN2);
+	cout << "Num1=" << iN1 << ",Num2=" << iN2 << endl;
+}

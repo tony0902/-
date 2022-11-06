@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	struct strData {
+		char cID[5], cNAME[30];
+		int iAGE; float fHEIGHT;
+	};
+
+	struct strData sA = {"A01","Christina Chiu",19,161.3};
+	
+	cout << "==============================\n";
+	cout << "ID:" << sA.cID << endl;
+	cout << "NAME:" << sA.cNAME << endl;
+	cout << "AGE:" << sA.iAGE << endl;
+	cout << "HEIGHT:" << sA.fHEIGHT << endl;
+}

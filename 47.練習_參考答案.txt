@@ -1,0 +1,70 @@
+/*
+請將輸出(列印結構陣列內容) 及 交換過程 改為副程式 vPrt 及 vSwap
+*/
+#include <iostream>
+using namespace std;
+
+struct strData {
+	char cID[6], cNAME[20];
+	int iCht, iEng, iMth, iTotal;
+	int iRank;
+};
+
+void vPrt(strData sT) //傳值
+{
+	cout << sT.cID << "\t";
+	cout << sT.cNAME << "\t";
+	cout << sT.iCht << "\t";
+	cout << sT.iEng << "\t";
+	cout << sT.iMth << "\t";
+	cout << sT.iTotal << "\t";
+	cout << sT.iRank << "\n";
+}
+
+void vTTL(int iC, int iE, int iM, int& iTTL) //傳參考
+{ iTTL = iC + iE + iM; }
+
+void vSwap(strData* s1, strData* s2) //傳址
+{
+	strData sTmp = *s1;
+	*s1 = *s2;
+	*s2 = sTmp;
+}
+
+int main()
+{
+	strData sA[] = {
+		{"AB013","Candy",85,100,96,0},
+		{"AB014","Andy",100,98,100,0},
+		{"AB015","Juliet",95,87,91,0},
+		{"AB016","Mandy",98,74,62,0},
+		{"AB017","Richard",89,83,94,0},
+		{"AB018","Bill",62,85,88,0},
+		{"AB019","Jucy",85,83,100,0},
+		{"AB020","Yolly",95,99,89,0},
+		{"AB021","Becky",93,96,91,0},
+		{"AB022","Romeo",93,84,89,0} };
+
+	int iSize = sizeof(sA) / sizeof(strData), iR = 10;
+	for (int i = 0; i < 10; i++)
+	{ vTTL(sA[i].iCht, sA[i].iEng, sA[i].iMth, sA[i].iTotal); }
+	cout << "====================================================\n";
+	cout << "ID\tNAME\t國文\t英文\t數學\t總分\t名次\n";
+	for (int i = 0; i < iSize; i++)
+	{ vPrt(sA[i]); }
+	for (int i = 1; i < iSize; i++)
+	{
+		int j;
+		for (j = 0; j < iSize - i; j++)
+		{
+			if (sA[j].iTotal < sA[j + 1].iTotal)
+			{ vSwap(&sA[j], &sA[j + 1]); }
+		}
+		sA[j].iRank = iR--;
+	} sA[0].iRank = iR;
+	cout << endl;
+	cout << "====================================================\n";
+	cout << "ID\tNAME\t國文\t英文\t數學\t總分\t名次\n";
+	for (int i = 0; i < iSize; i++)
+	{ vPrt(sA[i]); }
+}

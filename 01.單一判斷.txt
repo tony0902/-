@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iAge;
+	cout << "請輸入您的年齡：";
+	cin >> iAge;
+	cout << "是否成年？：";
+
+	if(iAge >= 18)
+	{ cout << "Y\n"; }
+
+	if(iAge < 18)
+	{ cout << "N\n"; }
+}

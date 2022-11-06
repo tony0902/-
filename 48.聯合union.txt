@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	union uniData {
+		char cID[5], cNAME[30];
+		int iAGE; float fHEIGHT;
+	};
+
+	union uniData sA;
+	cout << "輸入ID：";
+	cin >> sA.cID;
+	cout << "ID:" << sA.cID << endl;
+	cout << "==============================\n";
+	cout << "輸入NAME：";
+	cin >> sA.cNAME;
+	cout << "NAME:" << sA.cNAME << endl;
+	cout << "==============================\n";
+	cout << "輸入年齡：";
+	cin >> sA.iAGE;
+	cout << "AGE:" << sA.iAGE << endl;
+	cout << "==============================\n";
+	cout << "輸入身高：";
+	cin >> sA.fHEIGHT;
+	cout << "HEIGHT:" << sA.fHEIGHT << endl;
+}

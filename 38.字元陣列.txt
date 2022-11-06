@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	char cWd[] = "My name is John, I love Gjun~";
+	int i,iSize = sizeof(cWd) - 1;
+	for (i = 0; i < iSize; i++)
+	{
+		cout << cWd[i];
+	} cout << "\n\n";
+	i = 0;
+	while(cWd[i]!='\0')
+	{
+		cout << cWd[i++];
+	} cout << "\n\n";
+}

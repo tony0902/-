@@ -1,0 +1,16 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int iNum1 = 30;
+	int* iP1 = &iNum1;
+	cout << "iNum1的值：" << iNum1 << endl;
+	cout << "iNum1的址：" << &iNum1 << endl;
+	cout << "iP1的值：" << iP1 << endl;
+	cout << "請輸入iNum1的值：";
+	cin >> *iP1;
+	cout << "iNum1的值：" << iNum1 << ":" << *iP1 << endl;
+}

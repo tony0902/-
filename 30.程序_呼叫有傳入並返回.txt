@@ -1,0 +1,21 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int iTNS1(int iNum1, int iNum2)
+{ return (iNum1 + iNum2); }
+
+int main()
+{
+	int iNum1, iNum2, iSum;
+	int iTNS2(int, int);
+	cout << "值1：";
+	cin >> iNum1;
+	cout << "值2：";
+	cin >> iNum2;
+	cout << "兩數和為 " << iTNS1(iNum1, iNum2) << endl;
+	cout << "兩數和為 " << iTNS2(iNum1, iNum2) << endl;
+}
+
+int iTNS2(int iNum1, int iNum2)
+{ return (iNum1 + iNum2); }

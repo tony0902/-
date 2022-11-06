@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iA[][4] = { {5,9,17},{3,8},{21,7,64,9} };
+	int iRow = sizeof(iA) / sizeof(iA[0]);
+	int iCol = sizeof(iA[0]) / sizeof(int);
+
+	for (int i = 0; i < iRow; i++)
+	{
+		for (int j = 0; j < iCol; j++)
+		{
+			cout << "iA[" << i << "][" << j << "]=";
+			cout << iA[i][j] << endl;
+		}
+	}
+}

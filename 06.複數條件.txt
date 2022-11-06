@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iScr;
+	cout << "成績：";
+	cin >> iScr;
+	if (iScr > 500 || iScr < 0)
+		cout << "成績輸入錯誤~!!\n";
+	else
+	{
+		cout << "等級：";
+		if (iScr == 500)
+			cout << "A+\n";
+		else if (iScr >= 300)
+			cout << "A\n";
+		else if (iScr >= 100)
+			cout << "B\n";
+		else
+			cout << "C\n";
+	}
+
+	if (iScr <= 500 && iScr >= 0)
+	{
+		cout << "等級：";
+		if (iScr == 500)
+			cout << "A+\n";
+		else if (iScr >= 300)
+			cout << "A\n";
+		else if (iScr >= 100)
+			cout << "B\n";
+		else
+			cout << "C\n";
+	}
+	else
+	cout << "成績輸入錯誤~!!\n";
+}

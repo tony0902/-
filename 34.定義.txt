@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+#define fPI 3.14159265359
+#define fCA(fR) fR*fR*fPI
+#define fRCL(fR) 2*fR*fPI
+#define op cout
+#define ip cin
+using namespace std;
+
+//const float fPI = 3.14159265359;
+/*
+float fCA(float fR)
+{
+	return fR * fR * fPI;
+}
+
+float fRCL(float fR)
+{
+	return 2 * fR * fPI;
+}
+*/
+int main()
+{
+	float fR;
+	op << "請輸入圓的半徑：";
+	ip >> fR;
+	op << "半徑為 " << fR << " 的圓面積為 " << fCA(fR) << " ,圓周長為 " << fRCL(fR) << endl;
+}

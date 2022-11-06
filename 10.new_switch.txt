@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iScr;
+	cout << "成績：";
+	cin >> iScr;
+	cout << "等級：";
+	switch (iScr)
+	{
+		case 500:
+			cout << "A+\n";
+			break;
+		case 300 ... 499:
+			cout << "A\n";
+			break;
+		case 100 ... 299:
+			cout << "B\n";
+			break;
+		default:
+			cout << "C\n";
+			break;
+	}
+}

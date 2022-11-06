@@ -1,0 +1,28 @@
+#include <iostream>
+
+int iGCD(int iMin,int iMax)
+{
+	if(iMin==0)
+		return (iMax);
+	else
+		return iGCD(iMax%iMin,iMin);
+}
+
+using namespace std;
+int main()
+{
+	int iMax,iMin;
+	cout << "請輸入值1：";
+	cin >> iMax;
+	cout << "請輸入值2：";
+	cin >> iMin;
+	
+	if(iMin>iMax)
+	{
+		int iTmp=iMin;
+		iMin=iMax;
+		iMax=iTmp;
+	}
+	
+	cout << "最大公因數為 " << iGCD(iMin,iMax) << endl; 
+}

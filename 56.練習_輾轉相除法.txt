@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int iMax,iMin;
+	cout << "請輸入值1：";
+	cin >> iMax;
+	cout << "請輸入值2：";
+	cin >> iMin;
+	
+	if(iMin>iMax)
+	{
+		int iTmp=iMin;
+		iMin=iMax;
+		iMax=iTmp;
+	}
+	
+	while(iMin!=0)
+	{
+		int iTmp=iMax%iMin;
+		iMax=iMin;
+		iMin=iTmp;
+	}
+	
+	cout << "最大公因數為 " << iMax << endl; 
+}

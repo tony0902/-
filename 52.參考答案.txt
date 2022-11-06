@@ -1,0 +1,44 @@
+#include <iostream>
+
+int Ans(int iL)
+{ return iL * iL; }
+
+int Ans(int iL,int iMrk)
+{ return iL * iL * iL; }
+
+int Ans(int iL,int iW,int iH)
+{ return iL * iW * iH; }
+
+using namespace std;
+int main()
+{
+	int iL, iW, iH, iOpt;
+	do
+	{
+		cout << "請輸入選項(1:正方形 2:正方體 3:立方體)：";
+		cin >> iOpt;
+		if (iOpt == 1)
+		{
+			cout << "請輸入單邊長：";
+			cin >> iL;
+			cout << "此正方形面積為 " << Ans(iL) << endl;
+		}
+		else if (iOpt == 2)
+		{
+			cout << "請輸入單邊長：";
+			cin >> iL;
+			cout << "此正方體體積為 " << Ans(iL, 0) << endl;
+		}
+		else
+		{
+			cout << "請輸入長：";
+			cin >> iL;
+			cout << "請輸入寬：";
+			cin >> iW;
+			cout << "請輸入高：";
+			cin >> iH;
+			cout << "此立方體體積為 " << Ans(iL,iW,iH) << endl;
+		}
+		cout << endl;
+	} while (true);
+}

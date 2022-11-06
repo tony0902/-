@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	char cWd[] = "My name is John, I love Gjun~";
+	char* cPt = cWd;
+	int i, iSize = sizeof(cWd) - 1;
+	for (i = 0; i < iSize; i++)
+	{
+		cout << *(cPt + i);
+	} cout << "\n\n";
+
+	for (i = 0; i < iSize; i++)
+	{
+		cout << *(cPt + i);
+	} cout << "\n\n";
+
+	while (*cPt != '\0')
+	{
+		cout << *cPt++;
+	} cout << "\n\n";
+
+	cPt = cWd;
+	while (*cPt != '\0')
+	{
+		cout << *cPt++;
+	} cout << "\n\n";
+}

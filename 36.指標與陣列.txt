@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int iA[5],*iPt=iA;
+	for (int i = 0; i < sizeof(iA) / sizeof(int); i++)
+	{
+		cout << "請輸入 iA[" << i << "]的值：";
+		cin >> *(iPt + i);
+	}
+	cout << endl << "已輸入完畢\n\n";
+	for (int i = 0; i < sizeof(iA) / sizeof(int); i++)
+	{
+		cout << "iA[" << i << "] = " << *(iPt + i) << endl;
+	}
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iSnd;
+	for (iSnd = 30; iSnd > 0; iSnd-=2)
+	{
+		cout << "雞排剩幾秒：" << iSnd << "秒。\n";
+	}
+}

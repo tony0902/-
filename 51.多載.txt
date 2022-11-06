@@ -1,0 +1,25 @@
+#include <iostream>
+
+int Sum(int iV1,int iV2)
+{ return iV1 + iV2; }
+
+float Sum(float fV1,float fV2)
+{ return fV1 + fV2; }
+
+using namespace std;
+int main()
+{
+	int iA, iB;
+	cout << "A值：";
+	cin >> iA;
+	cout << "B值：";
+	cin >> iB;
+	cout << "兩數和為 " << Sum(iA, iB) << "\n\n";
+
+	float fA, fB;
+	cout << "A值：";
+	cin >> fA;
+	cout << "B值：";
+	cin >> fB;
+	cout << "兩數和為 " << Sum(fA, fB) << "\n\n";
+}

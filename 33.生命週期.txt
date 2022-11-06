@@ -1,0 +1,30 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int iT1(int iNum1)
+{
+	return iNum1+iNum1;
+}
+
+int iNum2=500;
+
+int iT2()
+{
+	return iNum2 * 2;
+}
+
+int main()
+{
+	int iNum1=20;
+	cout << iT1(iNum1) << endl;
+	cout << "Num2=" << iNum2 << endl;
+	iNum2 = 300;
+	cout << iT2() << endl;
+	//int i;
+	for (int i = 1; i <= 3; i++)
+	{
+		cout << "I=" << i << endl;
+	}cout << "I=" << i << endl;
+}

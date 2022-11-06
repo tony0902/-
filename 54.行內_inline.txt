@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+inline int Sum(int iV1, int iV2) { return iV1 + iV2; }
+
+int main()
+{
+	int iA, iB;
+	cout << "A值：";
+	cin >> iA;
+	cout << "B值：";
+	cin >> iB;
+	cout << "兩數和為 " << Sum(iA, iB) << "\n\n";
+}

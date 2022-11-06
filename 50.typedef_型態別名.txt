@@ -1,0 +1,28 @@
+#include <iostream>
+#define ip cin
+#define op cout
+ 
+typedef int ii;
+typedef float ff;
+
+using namespace std;
+int main()
+{
+	ii iA;
+	ii iB;
+	op << "A=";
+	ip >> iA;
+	op << "B=";
+	ip >> iB;
+	op << "A+B=" << iA + iB << endl;
+	cout << endl;
+
+	ff fA;
+	ff fB;
+	op << "A=";
+	ip >> fA;
+	op << "B=";
+	ip >> fB;
+	op << "A+B=" << fA + fB << endl;
+	cout << endl;
+}

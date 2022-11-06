@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void vPrt1()
+{
+	cout << "我是Prt1\n";
+}
+
+int main()
+{
+	void vPrt2();
+	cout << "我是主程序 1\n";
+	vPrt1();
+	cout << "我是主程序 2\n";
+	vPrt2();
+	cout << "我是主程序 3\n";
+}
+
+void vPrt2()
+{
+	cout << "我是Prt2\n";
+}
